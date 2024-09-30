@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Kaushan+Script&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-color: #fa0000;
+    --first-color: white;
+    --second-color: black;
+}
+
+.dark-theme {
+    --first-color: black;
+    --second-color: white;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--second-color);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+nav {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    z-index: 1000;
+}
+
+.nav-container {
+    width: 90%;
+    margin: 5px auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    font-family: "Kaushan Script", cursive !important;
+    color: var(--first-color);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.logo span {
+    font-family: "Kaushan Script", cursive;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.hamburger,
+.cancel {
+    cursor: pointer;
+    color: var(--first-color);
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    display: none;
+}
+
+.nav-container .links {
+    display: flex;
+
+}
+
+.nav-container .links i {
+    color: white;
+    margin-left: rem;
+}
+
+.nav-container .links a {
+    position: relative;
+    font-size: 1.2rem;
+    color: var(--first-color);
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 400;
+    transition: 0.3 linear;
+    font-family: "Lato", sans-serif !important;
+}
+
+.nav-container .link a::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    background-color: var(--primary-color);
+    height: 2px;
+    width: 0%;
+    transition: 0.2s linear;
+}
+
+.nav-container .links a:hover::before {
+    width: 100%;
+}
+
+.nav-container .links a:hover {
+    color: var(--primary-color);
+}
+
+.dropdown {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow: 0 0 20px var(--second-color);
+    transition: 0.2s linear;
+}
+
+.dropdown .links a {
+    display: flex;
+    color: var(--first-color);
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+    font-size: 1.2rem;
+    font-weight: 550;
+}
+
+.dropdown .links a:hover {
+    background-color: var(--primary-color);
+}
+
+.mode i {
+    color: var(--first-color);
+    font-size: 1rem;
+    border: 2px dotted var(--first-color);
+    border-radius: 100%;
+    padding: 5px;
+    cursor: pointer;
+    position: absolute;
+   top:-12px;
+}
+.mode i:hover {
+    border: 2px dotted var(--primary-color);
+}
+section {
+    width: 100%;
+    height: 90vh;  
+}
+.main-container {
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 25px auto; 
+}
+.main-container .image {
+    position: relative;
+    width: 25vw;
+    height: 60vh;
+    overflow: hidden;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container .image img {
+    border: 5px solid var(--first-color);
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.image::after {
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border-top: 8px solid var(--primary-color);
+    border-left: 8px solid var(--primary-color);
+    left: 0px;
+    top: 0px;
+}
+
+.image::before {
+    content: "";
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border-bottom: 8px solid var(--primary-color);
+    border-right: 8px solid var(--primary-color);
+    bottom: 0px;
+    right: 0px;
+}
+
+.main-container .image img:hover {
+    animation: animate 1.5s ease-in-out infinite;
+
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: translate();
+    }
+}
+
+.main-container .content {
+    color: var(--first-color);
+    width: 40%;
+    min-height: 100px;
+}
+
+.main-container .content h1 {
+    font-size: 1.8rem;
+}
+
+.main-container .content h1 span {
+    color: var(--primary-color);
+}
+
+.content .typewritter {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+
+}
+
+.content .typewritter-text {
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+.content p {
+    font-size: 1.2rem;
+}
+
+.socials {
+    margin-top: 1rem;
+    margin-left: -0.8rem;
+
+}
+
+.social-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border: 0.14rem solid var(--primary-color);
+    background-color: transparent;
+    margin: 0 6px;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+    border-radius: 100%;
+}
+
+.socials i:hover {
+    transform: scale(1.2);
+    color: var(--second-color);
+    background-color: var(--primary-color);
+    filter: drop-shadow(0 0 10px var(--primary-color))
+}
+
+.content button {
+    border: none;
+    outline: none;
+    width: 25%;
+    height: 6vh;
+    background-color: var(--primary-color);
+    margin: 25px;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+
+.content button a {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+}
+
+.content button a:hover {
+    color: var(--primary-color);
+}
+
+.content button:hover {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 20px var(--primary-color);
+}
+
+@media (max-width:884px) {
+    .logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 1.5rem;
+    }
+
+    .main-container {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        margin:80px auto;
+        gap: 2rem;
+      
+    }
+
+    section {
+        width: 100%;
+        height:100vh;   
+    }
+    
+    .nav-container .links {
+        display: none;
+    }
+
+    .hamburger,
+    .cancel {
+        display: block;
+        top: 23px;
+        right: 25px;
+        font-size: 1.7rem;
+    }
+
+    .mode {
+        display: block;
+        position: absolute;
+        top: 38.5px;
+        right: 85px;
+    }
+    .mode i {
+        color: var(--first-color);
+        font-size: 0.8rem;
+        border: 2px dotted var(--first-color);
+        border-radius: 100%;
+        padding: 3px;
+        cursor: pointer;
+    }
+
+
+    .main-container .content {
+        width: 80%;
+    }
+
+    .social-link i {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .main-container .image {
+        z-index: -1;
+        overflow: hidden;
+        padding: 5px;
+    }
+
+    .main-container .image img {
+        width: 80%;
+        height: 80%;
+    }
+}
+
+@media (max-width:440px) {
+    .main-container .image {
+        width: 70%;
+        height: 35%;
+    }
+
+    .main-container .content {
+        width: 80%;
+        height: 55%;
+    }
+
+    .content button {
+        width: 35%;
+        height: 5vh;
+    }
+
+    .socials {
+        display: flex;
+        justify-content: center;
+    }
+
+    .content .button {
+        margin-top: -0.5rem;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Animation */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: var(--z-modal);
+}
+
+.first {
+    background-color: var(--first-color);
+}
+
+.second {
+    background-color: var(--first-color);
+    left: 33.3%;
+}
+
+.third {
+    background-color: var(--first-color);
+    left: 66.6%;
+}
+
+#about {
+    height: 100vh;
+    width: 100vw;
+}

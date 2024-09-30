@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                Arjun<Span>Kumar</Span>
+            </div>
+            <div class="links">
+                <div class="link"><a href="#home">Home</a></div>
+                <div class="link"><a href="#about">About</a></div>
+                <div class="link"><a href="#">Skills</a></div>
+                <div class="link"><a href="#">Projects</a></div>
+                <div class="link"><a href="#">Contact</a></div>
+            </div>
+            <p class="mode">
+                <i class="fas fa-sun"></i>
+            </p>
+            <i class="fa-solid fas fa-bars hamburger" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#home"> Home</a>
+                <a href="#about">About</a>
+                <a href="#">Skills</a>
+                <a href="#">Projects</a>
+                <a href="#">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="main-container">
+            <div class="image">
+                <img src="babbar.png" alt="">
+            </div>
+            <div class="content">
+                <h1>Hey I'm <span>Arjun</span></h1>
+                <div class="typewritter">I'm a <span class="typewritter-text"></span><label for="">|</label>
+                </div>
+                <P>Hello, I’m Arjun Kumar! <br>
+                    A Computer Science student who loves coding, solving problems, and exploring new technologies.
+                    Welcome to my space where I share my projects, skills, and tech journey!</P>
+                <div class="socials">
+                    <a href="https://github.com/Arjunps12" target="_blank"><i
+                            class="fa-brands fab fab fa-github social-link"></i></a>
+                    <a href="https://www.linkedin.com/in/arjun-kumar-bb4b30300/" target="_blank"><i
+                            class="fa-brands fab fab fa-linkedin social-link"></i></a>
+                    <a href="https://x.com/arjunuit22" target="_blank"><i
+                            class="fa-brands fab fab fab fab fa-twitter social-link"></i></a>
+                    <a href="https://www.instagram.com/arjun_ps12/" target="_blank"><i
+                            class="fa-brands fab fab fab fab fa-instagram social-link"></i></a>
+                </div>
+                <div class="button">
+                    <button><a href="babbar.png" download="Arjun_CV.png">Download CV</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="about"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
