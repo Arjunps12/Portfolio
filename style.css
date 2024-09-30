@@ -123,7 +123,7 @@ nav {
 
 .dropdown .links a {
     display: flex;
-    color: var(--second-color);
+    color: white;
     text-decoration: none;
     justify-content: center;
     padding: 15px 0;
