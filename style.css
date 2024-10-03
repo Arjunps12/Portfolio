@@ -36,6 +36,7 @@ nav {
     height: 10vh;
     position: fixed;
     z-index: 1000;
+     background-color: var(--second-color);
 }
 
 .nav-container {
